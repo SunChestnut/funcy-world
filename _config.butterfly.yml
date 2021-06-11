@@ -41,7 +41,7 @@ external_link:
   exclude: ''
 filename_case: 0
 render_drafts: false
-post_asset_folder: true
+post_asset_folder: false
 relative_link: false
 future: true
 highlight:
@@ -56,6 +56,8 @@ prismjs:
   preprocess: true
   line_number: true
   tab_replace: ''
+
+index_img: http://119.29.157.197:8899/blog/pexels-alex-conchillos-3745234%202.jpg?Content-Disposition=attachment%3B%20filename%3D%22pexels-alex-conchillos-3745234%202.jpg%22&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=SUNYULISPECIAL%2F20210611%2F%2Fs3%2Faws4_request&X-Amz-Date=20210611T064136Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=dda7cd52b4a00320d823d5ed93b8818a75152d96911fb8906c6ff91674c794ca
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')

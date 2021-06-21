@@ -7,13 +7,13 @@ title: Just CODE It ❤️
 subtitle: ''
 description: ''
 keywords:
-author: YuLiSun
+author: 栗子
 language: en
 timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+url: https://sunyl.ink
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -99,6 +99,24 @@ ignore:
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: butterfly
+
+# CSS前缀：有些 CSS 并不是所有浏览器都支持，需要增加对应的前缀才会生效。
+css_prefix: true
+
+# 在 head 里增加一些 meta 资料，例如缩略图、标题、时间等等。当你分享网页到一些平台时，平台会读取 Open Graph 的内容，展示缩略图，标题等等信息。
+# https://developers.facebook.com/docs/sharing/webmasters/
+Open_Graph_meta: true
+
+# https://instant.page/
+# prefetch (预加载)：当鼠标悬停到链接上超过 65 毫秒时，Instantpage 会对该链接进行预加载，可以提升访问速度。
+instantpage: true
+
+# https://github.com/vinta/pangu.js
+# Insert a space between Chinese character and English character (中英文之间添加空格)
+pangu:
+  enable: true
+  field: site # site/post
+
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment

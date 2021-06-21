@@ -13,7 +13,7 @@ timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+url: https://sunyl.ink
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -57,8 +57,18 @@ prismjs:
   line_number: true
   tab_replace: ''
 
-# 首页图
+# 首页图 
+disable_top_img: false # 是否展示首页图
 index_img: http://119.29.157.197:8899/blog/pexels-alex-conchillos-3745234%202.jpg
+
+# 主页设置
+# 默认top_img全屏，site_info在中间
+# 使用默认, 都无需填写（建议默认）
+index_site_info_top: 200px  # 主页标题距离顶部距离  例如 300px/300em/300rem/10%
+index_top_img_height:  400px #主页top_img高度 例如 300px/300em/300rem  不能使用百分比
+
+# 加载动画 Loading Animation
+preloader: true
 
 # 头像
 avatar:
@@ -66,15 +76,83 @@ avatar:
   effect: false # 头像会一直转圈
 
 # 导航菜单
-Home: / || fas fa-home
-Archives: /archives/ || fas fa-archive
-Tags: /tags/ || fas fa-tags
-Categories: /categories/ || fas fa-folder-open
-Link: /link/ || fas fa-link
-About: /about/ || fas fa-heart
+menu:
+  Home: / || fas fa-home
+  Archives: /archives/ || fas fa-archive
+  Tags: /tags/ || fas fa-tags
+  Categories: /categories/ || fas fa-folder-open
+  Link: /link/ || fas fa-link
+  About: /about/ || fas fa-heart
 
 # 代码高亮
 highlight_theme: mac
+
+# 自定义主题色
+theme_color:
+  enable: true
+  main: "#03253c"
+  paginator: "#00c4b6"
+  button_hover: "#FF7242"
+  text_selection: "#00c4b6"
+  link_color: "#99a9bf"
+  meta_color: "#858585"
+  hr_color: "#A4D8FA"
+  code_foreground: "#F47466"
+  code_background: "rgba(27, 31, 35, .05)"
+  toc_color: "#00c4b6"
+  blockquote_padding_color: "#49b1f5"
+  blockquote_background_color: "#49b1f5"
+
+# 背景特效
+canvas_ribbon:
+  enable: true
+  size: 150
+  alpha: 0.6
+  zIndex: -1
+  click_to_change: ture  #设置是否每次点击都更换綵带
+  mobile: false # false 手机端不显示 true 手机端显示
+
+
+# 鼠标点击出现烟花
+fireworks:
+  enable: true
+  zIndex: 4555 # -1 or 9999，-1 代表烟火效果在底部，9999 代表烟火效果在前面
+  mobile: false
+
+# 美化页面显示
+beautify:
+  enable: true
+  field: site # site/post
+  title-prefix-icon: '\f0c1'
+  title-prefix-icon-color: "#F47466"
+
+# 全局字体
+# Don't modify the following settings unless you know how they work (非必要不要修改)
+font:
+  global-font-size:
+  code-font-size:
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Lato, Roboto, "PingFang SC", "Microsoft JhengHei", "Microsoft YaHei", sans-serif
+  code-font-family: consolas, Menlo, "PingFang SC", "Microsoft JhengHei", "Microsoft YaHei", sans-serif
+
+# 字数统计
+wordcount:
+  enable: true
+  post_wordcount: true
+  min2read: true
+  total_wordcount: true
+
+# 图片大图查看模式
+medium_zoom: true
+
+# Snackbar 弹窗
+# https://github.com/polonel/SnackBar
+# position 弹窗位置
+# 可选 top-left / top-center / top-right / bottom-left / bottom-center / bottom-right
+snackbar:
+  enable: true
+  position: bottom-left
+  bg_light: '#49b1f5' #light mode时弹窗背景
+  bg_dark: '#2d3035' #dark mode时弹窗背景
 
 
 # Home page setting

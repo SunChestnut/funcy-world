@@ -198,6 +198,12 @@ ignore:
 ## Themes: https://hexo.io/themes/
 theme: butterfly
 
+ICP:
+  enable: true
+  #pic: /img/beian.png  #备案国徽小图路径
+  url: http://beian.miit.gov.cn/
+  text: 津ICP备2021005061号-1
+
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:

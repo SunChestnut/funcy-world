@@ -2,14 +2,24 @@
 ## Docs: https://hexo.io/docs/configuration.html
 ## Source: https://github.com/hexojs/hexo/
 
-# Site
-title: Hexo
-subtitle: ''
-description: ''
-keywords:
-author: John Doe
-language: en
-timezone: ''
+# 主页subtitle，如果不展示首页图，则不显示
+subtitle:
+  enable: false
+  # Typewriter Effect (打字效果)
+  effect: true
+  # loop (循环打字)
+  loop: true
+  # source 调用第三方服务
+  # source: false 关闭调用
+  # source: 1  调用一言网的一句话（简体） https://hitokoto.cn/
+  # source: 2  调用一句网（简体） http://yijuzhan.com/
+  # source: 3  调用今日诗词（简体） https://www.jinrishici.com/
+  # subtitle 会先显示 source , 再显示 sub 的内容
+  source: false
+  # 如果关闭打字效果，subtitle 只会显示 sub 的第一行文字
+  sub:
+    - 今日事&#44;今日毕
+    - Never put off till tomorrow what you can do today
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
@@ -58,14 +68,34 @@ prismjs:
   tab_replace: ''
 
 # 首页图 
-disable_top_img: false # 是否展示首页图
+disable_top_img: true # 是否展示首页图
 index_img: http://119.29.157.197:8899/blog/pexels-alex-conchillos-3745234%202.jpg
+
+cover:
+  # 是否显示文章封面
+  index_enable: false
+  aside_enable: false
+  archives_enable: true
+
+post_meta:
+  page:
+    date_type: both # created or updated or both 主页文章日期是创建日或者更新日或都显示
+    date_format: date # date/relative 显示日期还是相对日期
+    categories: true # true or false 主页是否显示分类
+    tags: true # true or false 主页是否显示标籤
+    label: true # true or false 显示描述性文字
+  post:
+    date_type: both # created or updated or both 文章页日期是创建日或者更新日或都显示
+    date_format: date # date/relative 显示日期还是相对日期
+    categories: true # true or false 文章页是否显示分类
+    tags: true # true or false 文章页是否显示标籤
+    label: true # true or false 显示描述性文字
 
 # 主页设置
 # 默认top_img全屏，site_info在中间
 # 使用默认, 都无需填写（建议默认）
 index_site_info_top: 200px  # 主页标题距离顶部距离  例如 300px/300em/300rem/10%
-index_top_img_height:  400px #主页top_img高度 例如 300px/300em/300rem  不能使用百分比
+index_top_img_height: 400px #主页top_img高度 例如 300px/300em/300rem  不能使用百分比
 
 # 加载动画 Loading Animation
 preloader: true
@@ -75,14 +105,17 @@ avatar:
   img: http://119.29.157.197:8899/blog/1574870171482.jpeg
   effect: false # 头像会一直转圈
 
+# 给图片添加描述
+# 🔗 https://butterfly.js.org/posts/4aa8abbe/#%E5%9C%96%E7%89%87%E6%8F%8F%E8%BF%B0
+photofigcaption: false
+
 # 导航菜单
 menu:
-  Home: / || fas fa-home
-  Archives: /archives/ || fas fa-archive
-  Tags: /tags/ || fas fa-tags
-  Categories: /categories/ || fas fa-folder-open
-  Link: /link/ || fas fa-link
-  About: /about/ || fas fa-heart
+  主页: / || iconfont sylicon-shouhuihua
+  文章集: /archives/ || iconfont sylicon-shouhuishuben
+  标签: /tags/ || iconfont sylicon-shouhuituzi
+  分类: /categories/ || iconfont sylicon-shouhuixingqiu
+  关于我: /about/ || iconfont sylicon-shouhuinvhai
 
 # 代码高亮
 highlight_theme: mac
@@ -90,7 +123,7 @@ highlight_theme: mac
 # 自定义主题色
 theme_color:
   enable: true
-  main: "#03253c"
+  main: "#004d00"
   paginator: "#00c4b6"
   button_hover: "#FF7242"
   text_selection: "#00c4b6"
@@ -99,24 +132,38 @@ theme_color:
   hr_color: "#A4D8FA"
   code_foreground: "#F47466"
   code_background: "rgba(27, 31, 35, .05)"
-  toc_color: "#00c4b6"
+  toc_color: "#004d00"
   blockquote_padding_color: "#49b1f5"
   blockquote_background_color: "#49b1f5"
 
+# 背景，也可设置成图片
+#background: "#ffffff"
+background: url(http://119.29.157.197:8899/blog/abc.jpg)
+
 # 背景特效
 canvas_ribbon:
-  enable: true
+  enable: false
   size: 150
   alpha: 0.6
   zIndex: -1
   click_to_change: ture  #设置是否每次点击都更换綵带
   mobile: false # false 手机端不显示 true 手机端显示
 
-
 # 鼠标点击出现烟花
 fireworks:
-  enable: true
+  enable: false
   zIndex: 4555 # -1 or 9999，-1 代表烟火效果在底部，9999 代表烟火效果在前面
+  mobile: false
+
+# 点击出现文字，文字可自行修改
+ClickShowText:
+  enable: false
+  text:
+    - 看懂了么
+    - 学废了么
+    - YOU
+  fontSize: 15px
+  random: false # 文字随机显示
   mobile: false
 
 # 美化页面显示
@@ -129,10 +176,15 @@ beautify:
 # 全局字体
 # Don't modify the following settings unless you know how they work (非必要不要修改)
 font:
-  global-font-size:
+  global-font-size: 16px
   code-font-size:
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Lato, Roboto, "PingFang SC", "Microsoft JhengHei", "Microsoft YaHei", sans-serif
-  code-font-family: consolas, Menlo, "PingFang SC", "Microsoft JhengHei", "Microsoft YaHei", sans-serif
+  font-family: youzai, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Lato, Roboto, "PingFang SC", "Microsoft JhengHei", "Microsoft YaHei", sans-serif
+  code-font-family: CascadiaCodePL, consolas, Menlo, "PingFang SC", "Microsoft JhengHei", "Microsoft YaHei", sans-serif
+
+inject:
+  head:
+    - <link rel="stylesheet" href="/butterfly/css/index.css">
+    - <link rel="stylesheet" href="/butterfly/css/iconfont.css">
 
 # 字数统计
 wordcount:
@@ -144,6 +196,18 @@ wordcount:
 # 图片大图查看模式
 medium_zoom: true
 
+# 文章目录设置
+toc:
+  post: true  # 文章页是否展示 TOC
+  page: false # 普通页面是否展示 TOC
+  number: true  # 是否展示章节数
+  expand: false # 是否展开 TOC
+  style_simple: true # for post，简洁模式（侧边栏只显示 TOC, 只对文章页有效 ）
+
+# 文章锚点，开启文章锚点后，当你在文章页进行滚动时，文章链接会根据标题 ID 自动进行更改
+# PS：每题换一次，会留下一个历史记录，如果一篇文章有很多个锚点，就会留下很多历史记录
+anchor: true
+
 # Snackbar 弹窗
 # https://github.com/polonel/SnackBar
 # position 弹窗位置
@@ -154,6 +218,64 @@ snackbar:
   bg_light: '#49b1f5' #light mode时弹窗背景
   bg_dark: '#2d3035' #dark mode时弹窗背景
 
+
+# 夜间模式
+darkmode:
+  enable: true
+  # dark mode和 light mode切换按钮
+  button: true
+  autoChangeMode: 1
+
+# 本地搜索
+local_search:
+  enable: true
+
+# 侧边栏设置
+aside:
+  enable: true
+  hide: false
+  button: false
+  mobile: true # 手机页面（ 显示宽度 < 768px ）是否显示aside内容
+  position: right # left or right
+  # card_author:
+  #   enable: true
+  #   description:
+  #   button:
+  #     enable: true
+  #   icon: fab fa-github
+  #     text: Github
+  #     link: https://github.com/jerryc127/hexo-theme-butterfly
+  # card_announcement:
+  #   enable: true
+  #   content: This is my Blog
+  # card_recent_post:
+  #   enable: true
+  #   limit: 5 # if set 0 will show all
+  #   sort: date # date or updated
+  # card_categories:
+  #   enable: true
+  #   limit: 8 # if set 0 will show all
+  #   expand: none # none/true/false
+  # card_tags:
+  #   enable: true
+  #   limit: 40 # if set 0 will show all
+  #   color: true
+  # card_archives:
+  #   enable: true
+  #   type: monthly # yearly or monthly
+  #   format: MMMM YYYY # eg: YYYY年MM月
+  #   order: -1 # Sort of order. 1, asc for ascending; -1, desc for descending
+  #   limit: 8 # if set 0 will show all
+  # card_webinfo:
+  #   enable: true
+  #   post_count: true
+  #   last_push_date: true
+
+# 主页的站点分析
+busuanzi:
+  site_uv: false
+  site_pv: false
+  page_pv: true
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
@@ -203,6 +325,12 @@ ICP:
   #pic: /img/beian.png  #备案国徽小图路径
   url: http://beian.miit.gov.cn/
   text: 津ICP备2021005061号-1
+
+# 展示站点起始时间
+footer:
+  owner:
+    enable: true
+    since: 2021
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment

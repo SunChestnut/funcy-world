@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Just CODE It ❤️
+title: 小憩一下
 subtitle: ''
 description: ''
 keywords:
 author: 栗子
-language: en
+language: zh-CN
 timezone: ''
 
 # URL
@@ -116,6 +116,14 @@ instantpage: true
 pangu:
   enable: true
   field: site # site/post
+
+
+# 本地搜索
+search:
+  path: search.xml
+  field: all
+  content: true
+  # template: ./search.xml
 
 ICP:
   enable: true

@@ -1,7 +1,7 @@
 ---
-title: 探讨的问题：@Qualifier 注解解决了什么问题？如何使用？
+title: Qualifier注解解决了什么问题？如何使用？
 date: 2021-06-11 15:42:57
-tags:
+tags: Spring,注解
 ---
 
 # `@Autowired`需要用`@Qualifier`注解消除歧义

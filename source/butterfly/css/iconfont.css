@@ -1,0 +1,61 @@
+@font-face {
+    font-family: "iconfont"; /* Project id 2555957 */
+    src: url('//at.alicdn.com/t/font_2555957_5iinydvtu75.woff2?t=1644494422741') format('woff2'),
+    url('//at.alicdn.com/t/font_2555957_5iinydvtu75.woff?t=1644494422741') format('woff'),
+    url('//at.alicdn.com/t/font_2555957_5iinydvtu75.ttf?t=1644494422741') format('truetype');
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.sylicon-shouhuixiangrikui:before {
+    content: "\ed73";
+    color: #d4237a;
+    font-size: 25px;
+}
+
+.sylicon-shouhuinvhai:before {
+    content: "\ed7b";
+}
+
+.sylicon-shouhuishuben:before {
+    content: "\ed82";
+}
+
+.sylicon-books:before {
+    content: "\e709";
+}
+
+.sylicon-shouhuiduihuakuang:before {
+    content: "\ed70";
+}
+
+.sylicon-shouhuixiaoxiong:before {
+    content: "\ed72";
+}
+
+.sylicon-shouhuiliwu:before {
+    content: "\ed78";
+}
+
+.sylicon-shouhuituzi:before {
+    content: "\ed85";
+}
+
+.sylicon-shouhuihua:before {
+    content: "\ed87";
+}
+
+.sylicon-shouhuixingqiu:before {
+    content: "\ed88";
+}
+
+.sylicon-yanglazhuye:before {
+    content: "\e606";
+}
